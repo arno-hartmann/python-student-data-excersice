@@ -1,6 +1,5 @@
 import csv
 from datetime import date
-from datetime import datetime
 
 
 studentName = input("Name des Studenten: ")
@@ -22,14 +21,10 @@ def calculateAge(someDate):
 
 def writeStudent(Name, Birthday):
     with open('students.csv', 'a', newline='') as csvFile:
-        lineCount = 0
         studentwriter = csv.writer(csvFile)
         studentwriter.writerow([Name, Birthday])
         lineCount +=1
         print("Datei geschrieben")
-
-
-
 
 
 studentAge = calculateAge(studentBirthday)
